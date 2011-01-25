@@ -185,7 +185,6 @@ a:hover {
 }
 
 #menu a:hover, #menu .current_page_item a {
-	background: url(../images/img06.jpg) no-repeat left top; 
 	text-decoration: none;
 }
 
@@ -215,6 +214,7 @@ a:hover {
 	padding: 70px 30px 0px 60px;
 	background: #FCF8E5 url(../images/img02.jpg) repeat;
 	border: 1px solid #CFC69D;
+	min-height: 325px;
 }
 
 .post {
@@ -351,7 +351,7 @@ a:hover {
 	text-align: center;
 }
 
-#calendar #next {
+#calendar #next, .right {
 	text-align: right;
 }
 

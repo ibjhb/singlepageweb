@@ -1,15 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-
-Name       : Inscriptions  
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20101129
-
--->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>Single Page Web</title>
@@ -18,9 +7,74 @@ Released   : 20101129
 	<script type="text/javascript" src="http://documentcloud.github.com/underscore/underscore.js"></script>
 	<script type="text/javascript" src="http://documentcloud.github.com/backbone/backbone.js"></script>
 	
-	<script type="text/javascript" src="./js/spwa-backbone-0.9.min.js"></script>
+	<script type="text/javascript" src="./js/spwa-backbone-0.9.js"></script>
 	
 	<link href="./css/style.css" rel="stylesheet" type="text/css" media="screen" />
+	
+	<script type="text/template" id="home-template">
+		<div class="post">
+			<h2 class="title"><a href="#">Welcome to Single Page Web </a></h2>
+			<p>
+				This is our Home Page for the example.  Please use the links above to navigate and for more information.
+			</p>
+		</div>
+	</script>
+	
+	<script type="text/template" id="about-template">
+		<div class="post">
+			<h2 class="title"><a href="#">About Single Page Web </a></h2>
+			<p>
+				<a href="http://github.com/ibjhb/spwa-backbone/" rel="external">spwa-backbone</a> is a script written to demonstrate the power of Backbone.js and also provide a simple and quick way
+				to make single page web applications.  This is also a SEO test to see how Google and other search engines handle single web page applications
+			</p>
+			<p>
+				For more information or examples, view the <a href="#!contact">contact</a> page.
+			</p>
+			<p class="right">
+				<img src="./images/HTML5_Logo_64.png" width="64" height="64" border="0" alt="html5" />
+			</p>
+		</div>
+	</script>
+	
+	<script type="text/template" id="links-template">
+		<div class="post">
+			<h2 class="title"><a href="#">Fun Links</a></h2>
+			<p>
+				Check out these great sites that helped make this page possible:
+				
+				<ul>
+					<li>
+						<a href="http://www.coldfusioning.com" rel="external">ColdFusioning</a>
+					</li>
+					<li>
+						<a href="http://github.com/ibjhb/" rel="external">ibjhb's Github</a>
+					</li>
+					<li>
+						<a href="http://documentcloud.github.com/backbone" rel="external">Backbone.js</a>
+					</li>
+					<li>
+						<a href="http://documentcloud.github.com/underscore" rel="external">Underscore</a>
+					</li>
+					<li>
+						<a href="http://jquery.com" rel="external">jQuery</a>
+					</li>
+					
+				</ul>
+			</p>
+		</div>
+	</script>
+	
+	<script type="text/template" id="contact-template">
+		<div class="post">
+			<h2 class="title"><a href="#">Contact Someone</a></h2>
+			<p>
+				For more information or examples check out Github at: <br />
+				<a href="http://github.com/ibjhb/spwa-backbone/" rel="external">http://github.com/ibjhb/spwa-backbone/ </a>
+				or on 
+				<a href="http://www.coldfusioning.com" rel="external">http://www.coldfusioning.com</a>
+			</p>
+		</div>
+	</script>
 </head>
 <body>
 <div id="wrapper">
@@ -28,6 +82,7 @@ Released   : 20101129
 		<div id="page-bgtop">
 			<div id="page-bgbtm">
 				<div id="content">
+					<!--- 
 					<div class="post">
 						<h2 class="title"><a href="#">Welcome to Inscriptions </a></h2>
 						<p class="meta"><span class="date">November 10, 2010</span><span class="posted">Posted by <a href="#">Someone</a></span></p>
@@ -38,63 +93,25 @@ Released   : 20101129
 							<p class="links"><a href="#">Read More</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Comments</a></p>
 						</div>
 					</div>
-					<div class="post">
-						<h2 class="title"><a href="#">Lorem ipsum sed aliquam</a></h2>
-						<p class="meta"><span class="date">November 10, 2010</span><span class="posted">Posted by <a href="#">Someone</a></span></p>
-						<div style="clear: both;">&nbsp;</div>
-						<div class="entry">
-							<p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum vel, tempor at, varius non, purus. Mauris vitae nisl nec metus placerat consectetuer. Donec ipsum. Proin imperdiet est. Phasellus <a href="#">dapibus semper urna</a>. Pellentesque ornare, orci in consectetuer hendrerit, urna elit eleifend nunc, ut consectetuer nisl felis ac diam. Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem.  Mauris quam enim, molestie in, rhoncus ut, lobortis a, est.</p>
-							<p class="links"><a href="#">Read More</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Comments</a></p>
-						</div>
-					</div>
-					<div class="post">
-						<h2 class="title"><a href="#">Consecteteur hendrerit </a></h2>
-						<p class="meta"><span class="date">November 10, 2010</span><span class="posted">Posted by <a href="#">Someone</a></span></p>
-						<div style="clear: both;">&nbsp;</div>
-						<div class="entry">
-							<p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum vel, tempor at, varius non, purus. Mauris vitae nisl nec metus placerat consectetuer. Donec ipsum. Proin imperdiet est. Phasellus <a href="#">dapibus semper urna</a>. Pellentesque ornare, orci in consectetuer hendrerit, urna elit eleifend nunc, ut consectetuer nisl felis ac diam. Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem.  Mauris quam enim, molestie in, rhoncus ut, lobortis a, est.</p>
-							<p class="links"><a href="#">Read More</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Comments</a></p>
-						</div>
-					</div>
-					<div class="post">
-						<h2 class="title"><a href="#">Suspendisse hendrerit </a></h2>
-						<p class="meta"><span class="date">November 10, 2010</span><span class="posted">Posted by <a href="#">Someone</a></span></p>
-						<div style="clear: both;">&nbsp;</div>
-						<div class="entry">
-							<p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum vel, tempor at, varius non, purus. Mauris vitae nisl nec metus placerat consectetuer. Donec ipsum. Proin imperdiet est. Phasellus <a href="#">dapibus semper urna</a>. Pellentesque ornare, orci in consectetuer hendrerit, urna elit eleifend nunc, ut consectetuer nisl felis ac diam. Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem.  Mauris quam enim, molestie in, rhoncus ut, lobortis a, est.</p>
-							<p class="links"><a href="#">Read More</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Comments</a></p>
-						</div>
-					</div>
+					--->
 					<div style="clear: both;">&nbsp;</div>
 				</div>
 				<!-- end #content -->
 				<div id="sidebar">
 					<div id="logo">
-						<h1><a href="#">Inscriptions </a></h1>
-						<p>Design by <a href="http://www.freecsstemplates.org/">CSS Templates</a></p>
+						<h1><a href="#">Single Page</a></h1>
+						<p>Code by <a href="http://www.coldfusioning.com/">ibjhb</a></p>
 					</div>
 					<div id="menu">
 						<ul>
-							<li class="current_page_item"><a href="#">Home</a></li>
-							<li><a href="#">Blog</a></li>
-							<li><a href="#">Photos</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Links</a></li>
-							<li><a href="#">Contact</a></li>
+							<li class="current_page_item"><a href="#!home">Home</a></li>
+							<li><a href="#!about">About</a></li>
+							<li><a href="#!links">Links</a></li>
+							<li><a href="#!contact">Contact</a></li>
 						</ul>
 					</div>
+					<!--- 
 					<ul>
-						<li>
-							<div id="search" >
-								<form method="get" action="#">
-									<div>
-										<input type="text" name="s" id="search-text" value="" />
-										<input type="submit" id="search-submit" value="GO" />
-									</div>
-								</form>
-							</div>
-							<div style="clear: both;">&nbsp;</div>
-						</li>
 						<li>
 							<h2>Aliquam tempus</h2>
 							<p>Mauris vitae nisl nec metus placerat perdiet est. Phasellus dapibus semper consectetuer hendrerit.</p>
@@ -133,6 +150,7 @@ Released   : 20101129
 							</ul>
 						</li>
 					</ul>
+					--->
 				</div>
 				<!-- end #sidebar -->
 				<div style="clear: both;">&nbsp;</div>
@@ -142,7 +160,7 @@ Released   : 20101129
 	<!-- end #page -->
 </div>
 <div id="footer">
-	<p>Copyright (c) 2008 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">CSS Templates</a>.</p>
+	<p>Copyright (c) 2011 ibjhb.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">CSS Templates</a>.</p>
 </div>
 <!-- end #footer -->
 </body>

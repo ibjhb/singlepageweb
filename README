@@ -1,0 +1,11 @@
+singlepageweb.com is an example webpage designed to demonstrate Backbone.js, spwa-backbone, and other libraries
+to create a single page website.  It also is an SEO test to see how Google and other search engines handle single page sites.
+
+Site: 
+http://www.singlepageweb.com/
+
+Libraries Used:
+spwa-backbone (http://github.com/ibjhb/spwa-backbone/)
+Backbone.js (http://documentcloud.github.com/backbone)
+Underscore (http://documentcloud.github.com/underscore)
+jQuery (http://jquery.com)

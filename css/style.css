@@ -8,7 +8,7 @@ Released for free under a Creative Commons Attribution 2.5 License
 body {
 	margin: 30px 0px 0px 0px;
 	padding: 0;
-	background: #DCD4A7 url(images/img01.jpg) repeat-y center top;
+	background: #DCD4A7 url(../images/img01.jpg) repeat-y center top;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: #3E3B36;
@@ -117,7 +117,7 @@ a:hover {
 	width: 280px;
 	height: 50px;
 	padding: 20px 0px 0px 0px;
-	background: url(images/img05.jpg) no-repeat left 15px;
+	background: url(../images/img05.jpg) no-repeat left 15px;
 }
 
 #search form {
@@ -185,7 +185,7 @@ a:hover {
 }
 
 #menu a:hover, #menu .current_page_item a {
-	background: url(images/img06.jpg) no-repeat left top; 
+	background: url(../images/img06.jpg) no-repeat left top; 
 	text-decoration: none;
 }
 
@@ -213,7 +213,7 @@ a:hover {
 	float: right;
 	width: 520px;
 	padding: 70px 30px 0px 60px;
-	background: #FCF8E5 url(images/img02.jpg) repeat;
+	background: #FCF8E5 url(../images/img02.jpg) repeat;
 	border: 1px solid #CFC69D;
 }
 

@@ -9,3 +9,6 @@ spwa-backbone (http://github.com/ibjhb/spwa-backbone/)
 Backbone.js (http://documentcloud.github.com/backbone)
 Underscore (http://documentcloud.github.com/underscore)
 jQuery (http://jquery.com)
+
+You can view the annotated source for spwa-backbone:
+http://ibjhb.github.com/spwa-backbone/

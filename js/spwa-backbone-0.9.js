@@ -36,7 +36,7 @@ $(function(){
 		,initialize: function(){
 			
 			// Keep render and close bound to "this":
-			_.bindAll(this, "render", "close");
+			_.bindAll(this, "render");
 			
 			// When "change" is called, let's render the view:
   			this.model.bind("change", this.render);
@@ -92,9 +92,9 @@ $(function(){
 			$(this.el).html(view.el);
 		}
 	});
-	
+
 	// Fire up our applicaiton and pass in an array of script/html objects
-	window.App = new site($("script[type=text/template]"));
+	window.App = new site($("script[type=text\\/template]"));
 	
 	// Start hashtag tracking via Backbone:
 	Backbone.history.start();
